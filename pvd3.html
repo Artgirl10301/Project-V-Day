@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #cff1fb;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Disable scroll */
+        }
+
+        .decision-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .decision-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .no-button {
+            background-color: #e81d1d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Decision Screen -->
+    <div class="decision-screen">
+        <div class="decision-message">Will you be my Valentine?</div>
+        <div class="buttons-container">
+            <div class="button yes-button" onclick="redirectToNextPage()">Yes</div>
+            <div class="button no-button" onmousemove="dodgeCursor()">No</div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToNextPage() {
+            // Redirect to the next page
+            window.location.href = 'final-page.html';
+        }
+
+        function dodgeCursor() {
+            // Move the "No" button away from the cursor
+            const noButton = document.querySelector('.no-button');
+            const offsetX = Math.random() * 100 - 50; // Random X offset
+            const offsetY = Math.random() * 100 - 50; // Random Y offset
+            noButton.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        }
+    </script>
+
+</body>
+</html>

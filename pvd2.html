@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #cff1fb;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Disable scroll */
+        }
+
+        .welcome-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .welcome-message {
+            font-size: 6vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Screen -->
+    <div class="welcome-screen">
+        <div class="welcome-message">Welcome to Project V-Day</div>
+    </div>
+    <script>
+        // Transition to the next page after 5000 milliseconds (5 seconds)
+        setTimeout(function() {
+            window.location.href = 'pvd3.html'; // Replace 'next_page.html' with the actual filename of the next page
+        }, 6500);
+    </script>
+</body>
+</html>
